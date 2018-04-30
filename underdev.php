@@ -53,7 +53,21 @@ if ( ! $requirements->satisfied() ) {
 }
 
 /**
- * Bootstrap
+ * Boots up the plugin
+ *
+ * @return object Runtime class instance
  */
+function underdev_runtime() {
 
+	global $underdev_runtime;
 
+	if ( empty( $underdev_runtime ) ) {
+		$underdev_runtime = new BracketSpace\underDEV\Runtime( __FILE__ );
+	}
+
+	return $underdev_runtime;
+
+}
+
+$runtime = underdev_runtime();
+$runtime->boot();
