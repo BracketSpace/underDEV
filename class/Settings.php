@@ -68,6 +68,14 @@ class Settings extends SettingsAPI {
 				'render'   => array( new CoreFields\Select(), 'input' ),
 				'sanitize' => array( new CoreFields\Select(), 'sanitize' ),
 			) )
+			->add_field( array(
+				'name'        => __( 'Allowed IPs', 'underdev' ),
+				'slug'        => 'allowed_ips',
+				'default'     => '',
+				'description' => sprintf( __( 'IPs allowed to access the website. Your IP is: %s' ), '<code>' . underdev_get_ip() . '</code>' ),
+				'render'      => array( new CoreFields\Text(), 'input' ),
+				'sanitize'    => array( new CoreFields\Text(), 'sanitize' ),
+			) )
 			->description( __( 'Website access settings', 'underdev' ) );
 
 	}
