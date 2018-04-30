@@ -25,6 +25,8 @@ class Settings extends SettingsAPI {
 	/**
 	 * Register Settings page under Tools menu
 	 *
+	 * @action admin_menu
+	 *
 	 * @return void
 	 */
 	public function register_page() {
@@ -41,6 +43,8 @@ class Settings extends SettingsAPI {
 
 	/**
 	 * Registers Settings
+	 *
+	 * @action wp_loaded
 	 *
 	 * @return void
 	 */
