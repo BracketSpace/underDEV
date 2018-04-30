@@ -8,7 +8,7 @@
  * @package notification/slugnamexx
  */
 
-namespace BracketSpace\Notification\XXNAMESPACEXX\Utils;
+namespace BracketSpace\underDEV\Utils;
 
 /**
  * Requirements class

@@ -11,3 +11,49 @@
  *
  * @package underdev
  */
+
+/**
+ * Plugin's autoload function
+ *
+ * @param  string $class class name.
+ * @return mixed         false if not plugin's class or void
+ */
+function bracketspace_underdev_autoload( $class ) {
+
+	$parts = explode( '\\', $class );
+
+	if ( array_shift( $parts ) != 'BracketSpace' ) {
+		return false;
+	}
+
+	if ( array_shift( $parts ) != 'underDEV' ) {
+		return false;
+	}
+
+	$file = trailingslashit( dirname( __FILE__ ) ) . trailingslashit( 'class' ) . implode( '/', $parts ) . '.php';
+
+	if ( file_exists( $file ) ) {
+		require_once $file;
+	}
+
+}
+spl_autoload_register( 'bracketspace_underdev_autoload' );
+
+/**
+ * Requirements check
+ */
+$requirements = new BracketSpace\underDEV\Utils\Requirements( 'underDEV', array(
+	'php' => '5.3',
+	'wp'  => '4.6',
+) );
+
+if ( ! $requirements->satisfied() ) {
+	add_action( 'admin_notices', array( $requirements, 'notice' ) );
+	return;
+}
+
+/**
+ * Bootstrap
+ */
+
+

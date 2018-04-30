@@ -5,7 +5,7 @@
  * @package notification/slugnamexx
  */
 
-namespace BracketSpace\Notification\XXNAMESPACEXX\Utils\Settings\CoreFields;
+namespace BracketSpace\underDEV\Utils\Settings\CoreFields;
 
 /**
  * Range class
