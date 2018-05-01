@@ -35,7 +35,7 @@ class Settings extends SettingsAPI {
 	        __( 'underDEV Settings', 'underDEV' ),
 	        'underDEV',
 	        'manage_options',
-	        'settings',
+	        'underdev',
 	        array( $this, 'settings_page' )
 	    );
 

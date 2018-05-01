@@ -78,7 +78,7 @@ class Runtime {
 	 */
 	public function workers() {
 
-		$this->create_class( new Worker\Access() );
+		$this->create_class( new Worker\Access( $this->files ) );
 
 	}
 
