@@ -72,7 +72,7 @@ class Settings extends SettingsAPI {
 				'name'        => __( 'Allowed IPs', 'underdev' ),
 				'slug'        => 'allowed_ips',
 				'default'     => '',
-				'description' => sprintf( __( 'IPs allowed to access the website. Your IP is: %s' ), '<code>' . underdev_get_ip() . '</code>' ),
+				'description' => sprintf( __( 'IPs allowed to access the website, comma separated list. Your IP is: %s' ), '<code>' . underdev_get_ip() . '</code>' ),
 				'render'      => array( new CoreFields\Text(), 'input' ),
 				'sanitize'    => array( new CoreFields\Text(), 'sanitize' ),
 			) )
