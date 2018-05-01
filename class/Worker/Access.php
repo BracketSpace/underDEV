@@ -103,7 +103,7 @@ class Access  {
 	}
 
 	/**
-	 * Enqueue access worker scripts
+	 * Enqueue access worker styles
      *
      * @action admin_enqueue_scripts
      * @action wp_enqueue_scripts
@@ -111,7 +111,11 @@ class Access  {
 	 * @param  string $page_hook current page hook.
 	 * @return void
 	 */
-	public function admin_enqueue_scripts( $page_hook ) {
+	public function enqueue_styles( $page_hook ) {
+
+		if ( underdev_get_setting( 'maintenance/access/block' ) == 'unlocked' ) {
+			return;
+		}
 
 		wp_enqueue_style( 'underdev-access', $this->files->asset_url( 'css/workers', 'access.css' ), array(), $this->files->asset_mtime( 'css/workers', 'access.css' ) );
 
