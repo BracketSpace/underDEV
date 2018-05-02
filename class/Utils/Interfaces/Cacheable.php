@@ -6,7 +6,7 @@
  * @package notification/slugnamexx
  */
 
-namespace BracketSpace\Notification\XXNAMESPACEXX\Utils\Interfaces;
+namespace BracketSpace\underDEV\Utils\Interfaces;
 
 /**
  * Cacheable interface

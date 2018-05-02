@@ -5,7 +5,7 @@
  * @package notification/slugnamexx
  */
 
-namespace BracketSpace\Notification\XXNAMESPACEXX\Utils\Settings;
+namespace BracketSpace\underDEV\Utils\Settings;
 
 /**
  * Field class

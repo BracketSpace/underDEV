@@ -5,9 +5,9 @@
  * @package notification/slugnamexx
  */
 
-namespace BracketSpace\Notification\XXNAMESPACEXX\Utils;
+namespace BracketSpace\underDEV\Utils;
 
-use BracketSpace\Notification\XXNAMESPACEXX\Utils\Settings\Section;
+use BracketSpace\underDEV\Utils\Settings\Section;
 
 /**
  * Settings class

@@ -7,10 +7,10 @@
  * @package notification/slugnamexx
  */
 
-namespace BracketSpace\Notification\XXNAMESPACEXX\Utils\Cache;
+namespace BracketSpace\underDEV\Utils\Cache;
 
-use BracketSpace\Notification\XXNAMESPACEXX\Utils\Cache\Cache;
-use BracketSpace\Notification\XXNAMESPACEXX\Utils\Interfaces\Cacheable;
+use BracketSpace\underDEV\Utils\Cache\Cache;
+use BracketSpace\underDEV\Utils\Interfaces\Cacheable;
 
 /**
  * Object cache

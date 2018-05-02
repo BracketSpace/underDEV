@@ -5,7 +5,7 @@
  * @package notification/slugnamexx
  */
 
-namespace BracketSpace\Notification\XXNAMESPACEXX\Utils\Cache;
+namespace BracketSpace\underDEV\Utils\Cache;
 
 /**
  * Cache class

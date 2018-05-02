@@ -6,7 +6,7 @@
  * @package notification/slugnamexx
  */
 
-namespace BracketSpace\Notification\XXNAMESPACEXX\Utils;
+namespace BracketSpace\underDEV\Utils;
 
 /**
  * Files class
@@ -176,6 +176,17 @@ class Files {
 		$assets_dirs[] = $type;
 		$assets_dirs[] = $file;
 		return $this->file_path( $assets_dirs );
+	}
+
+	/**
+	 * Gets path to an asset file
+     *
+	 * @param  string $type asset type - js | css | images.
+	 * @param  string $file file name.
+	 * @return string       asset file path
+	 */
+	public function asset_mtime( $type = '', $file = '' ) {
+		return filemtime( $this->asset_path( $type, $file ) );
 	}
 
 	/**

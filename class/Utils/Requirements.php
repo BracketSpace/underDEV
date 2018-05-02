@@ -8,7 +8,7 @@
  * @package notification/slugnamexx
  */
 
-namespace BracketSpace\Notification\XXNAMESPACEXX\Utils;
+namespace BracketSpace\underDEV\Utils;
 
 /**
  * Requirements class
@@ -185,7 +185,7 @@ class Requirements {
 
 		if ( ! empty( $missing_extensions ) ) {
 			$requirements->add_error( sprintf(
-				_n( 'PHP extension: %s', 'PHP extensions: %s', count( $missing_extensions ) ),
+				_n( 'PHP extension: %s', 'PHP extensions: %s', count( $missing_extensions ), 'notification-slugnamexx' ),
 				implode( ', ', $missing_extensions )
 			) );
 		}
@@ -276,7 +276,7 @@ class Requirements {
 
 		if ( ! empty( $collisions ) ) {
 			$requirements->add_error( sprintf(
-				_n( 'register %s function but it\'s already taken', 'register %s functions but these are already taken', count( $collisions ) ),
+				_n( 'register %s function but it\'s already taken', 'register %s functions but these are already taken', count( $collisions ), 'notification-slugnamexx' ),
 				implode( ', ', $collisions )
 			) );
 		}
@@ -302,7 +302,7 @@ class Requirements {
 
 		if ( ! empty( $collisions ) ) {
 			$requirements->add_error( sprintf(
-				_n( 'register %s class but it\'s already defined', 'register %s classes but these are already defined', count( $collisions ) ),
+				_n( 'register %s class but it\'s already defined', 'register %s classes but these are already defined', count( $collisions ), 'notification-slugnamexx' ),
 				implode( ', ', $collisions )
 			) );
 		}
