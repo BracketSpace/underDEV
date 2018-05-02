@@ -70,11 +70,11 @@ class Access  {
 	 */
 	public function drop_message() {
 
-		$message  = '<h1>' . __( 'Planned maintenance in progress' ) . '</h1>';
-		$message .= '<p>' . __( 'The requested service is temporarily not available due to maintenance. Please try again later.' ) . '</p>';
-		$message .= '<p>' . __( 'We are sorry for the inconvenience.' ) . '</p>';
+		$message  = '<h1>' . __( 'Planned maintenance in progress', 'notification-slugnamexx' ) . '</h1>';
+		$message .= '<p>' . __( 'The requested service is temporarily not available due to maintenance. Please try again later.', 'notification-slugnamexx' ) . '</p>';
+		$message .= '<p>' . __( 'We are sorry for the inconvenience.', 'notification-slugnamexx' ) . '</p>';
 
-		wp_die( $message, __( 'Planned maintenance' ), array( 'response' => 200 ) );
+		wp_die( $message, __( 'Planned maintenance', 'notification-slugnamexx' ), array( 'response' => 200 ) );
 
 	}
 
@@ -96,7 +96,7 @@ class Access  {
 		$admin_bar->add_menu( array(
 		    'id'     => 'underdev-access-blocked',
             'parent' => 'top-secondary',
-		    'title'  => __( 'Public access blocked' ),
+		    'title'  => __( 'Public access blocked', 'notification-slugnamexx' ),
 		    'href'   => admin_url( 'tools.php?page=underdev&section=maintenance' ),
 		) );
 
