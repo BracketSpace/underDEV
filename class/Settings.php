@@ -32,7 +32,7 @@ class Settings extends SettingsAPI {
 	public function register_page() {
 
 		$this->page_hook = add_management_page(
-	        __( 'underDEV Settings', 'underDEV' ),
+	        __( 'underDEV Settings', 'underDEV', 'notification-slugnamexx' ),
 	        'underDEV',
 	        'manage_options',
 	        'underdev',
@@ -50,33 +50,33 @@ class Settings extends SettingsAPI {
 	 */
 	public function register_settings() {
 
-		$maintenance = $this->add_section( __( 'Maintenance', 'underdev' ), 'maintenance' );
+		$maintenance = $this->add_section( __( 'Maintenance', 'underdev', 'notification-slugnamexx' ), 'maintenance' );
 
-		$maintenance->add_group( __( 'Access', 'underdev' ), 'access' )
+		$maintenance->add_group( __( 'Access', 'underdev', 'notification-slugnamexx' ), 'access' )
 			->add_field( array(
-				'name'     => __( 'Block access', 'underdev' ),
+				'name'     => __( 'Block access', 'underdev', 'notification-slugnamexx' ),
 				'slug'     => 'block',
 				'default'  => 'unlocked',
 				'addons'   => array(
 					'pretty'  => true,
 					'options' => array(
-						'unlocked' => __( 'Unlocked' ),
-						'admin'    => __( 'Locked for anyone except logged in admins' ),
-						'ip'       => __( 'Locked for anyone except IPs' ),
+						'unlocked' => __( 'Unlocked', 'notification-slugnamexx' ),
+						'admin'    => __( 'Locked for anyone except logged in admins', 'notification-slugnamexx' ),
+						'ip'       => __( 'Locked for anyone except IPs', 'notification-slugnamexx' ),
 					)
 				),
 				'render'   => array( new CoreFields\Select(), 'input' ),
 				'sanitize' => array( new CoreFields\Select(), 'sanitize' ),
 			) )
 			->add_field( array(
-				'name'        => __( 'Allowed IPs', 'underdev' ),
+				'name'        => __( 'Allowed IPs', 'underdev', 'notification-slugnamexx' ),
 				'slug'        => 'allowed_ips',
 				'default'     => '',
-				'description' => sprintf( __( 'IPs allowed to access the website, comma separated list. Your IP is: %s' ), '<code>' . underdev_get_ip() . '</code>' ),
+				'description' => sprintf( __( 'IPs allowed to access the website, comma separated list. Your IP is: %s', 'notification-slugnamexx' ), '<code>' . underdev_get_ip() . '</code>' ),
 				'render'      => array( new CoreFields\Text(), 'input' ),
 				'sanitize'    => array( new CoreFields\Text(), 'sanitize' ),
 			) )
-			->description( __( 'Website access settings', 'underdev' ) );
+			->description( __( 'Website access settings', 'underdev', 'notification-slugnamexx' ) );
 
 	}
 
